@@ -18,33 +18,34 @@ class BookSeeder extends Seeder
             'title' => 'Magician',
             'category' => 'fantasy',
             'series' => 'The riftwar saga',
-            'image_path' => 'resources/images/magier.jpg'
+            'image_path' => 'images/magier.jpg'
         ]);
 
         Book::create([
             'title' => 'A Storm of Swords',
             'category' => 'fantasy',
             'series' => 'A song of ice and fire',
-            'image_path' => 'resources/images/stormofswords.jpg'
+            'image_path' => 'images/stormofswords.jpg'
         ]);
 
         Book::create([
             'title' => 'A Clash of Kings',
             'category' => 'fantasy',
             'series' => 'A song of ice and fire',
-            'image_path' => 'resources/images/clashofkings.jpg'
+            'image_path' => 'images/clashofkings.jpg'
         ]);
 
         Book::create([
             'title' => 'A knight of the seven kingdoms',
             'category' => 'fantasy',
-            'image_path' => 'resources/images/knightofsevenkingdoms.jpg'
+            'image_path' => 'images/knightofsevenkingdoms.jpg'
         ]);
 
         Book::create([
             'title' => 'Anton de Kom',
+            'subtitle'  => 'Biografie',
             'category' => 'History',
-            'image_path' => 'resources/images/antondekom.jpg'
+            'image_path' => 'images/antondekom.jpg'
         ]);
     }
 }
