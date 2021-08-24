@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Writer extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,6 @@ class Book extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
-        'category',
-        'series',
-        'image_path'
+        'name',
     ];
 }
