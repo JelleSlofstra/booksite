@@ -10,7 +10,12 @@ class HomeController extends Controller
     public function index()
     {
         $books = Book::all();
-        return view('home',[
+        foreach ($books as $book)
+        {
+            $book->addWriters();
+        }
+
+        return view('books/index',[
             'books' => $books
         ]);
     }

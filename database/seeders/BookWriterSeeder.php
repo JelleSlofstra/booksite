@@ -43,5 +43,80 @@ class BookWriterSeeder extends Seeder
             'book_id'   => 5,
             'writer_id' => 4
         ]);
+
+        BookWriter::create([
+            'book_id'   => 6,
+            'writer_id' => 5
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 7,
+            'writer_id' => 5
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 8,
+            'writer_id' => 6
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 9,
+            'writer_id' => 7
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 10,
+            'writer_id' => 8
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 11,
+            'writer_id' => 8
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 12,
+            'writer_id' => 9
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 13,
+            'writer_id' => 10
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 14,
+            'writer_id' => 10
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 15,
+            'writer_id' => 11
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 16,
+            'writer_id' => 12
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 17,
+            'writer_id' => 12
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 18,
+            'writer_id' => 13
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 19,
+            'writer_id' => 14
+        ]);
+
+        BookWriter::create([
+            'book_id'   => 20,
+            'writer_id' => 15
+        ]);
     }
 }

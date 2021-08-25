@@ -29,5 +29,49 @@ class WriterSeeder extends Seeder
         Writer::create([
             'name'  => 'Rob Woortman'
         ]);
+
+        Writer::create([
+            'name'  => 'Jared Diamond'
+        ]);
+
+        Writer::create([
+            'name'  => 'Dante Alighieri'
+        ]);
+
+        Writer::create([
+            'name'  => 'Lev Nikolayevich Tolstoy'
+        ]);
+
+        Writer::create([
+            'name'  => 'David van Reybrouck'
+        ]);
+
+        Writer::create([
+            'name'  => 'Anthony Beevor'
+        ]);
+
+        Writer::create([
+            'name'  => 'Adam Zamoyski'
+        ]);
+
+        Writer::create([
+            'name'  => 'John Julius Norwhich'
+        ]);
+
+        Writer::create([
+            'name'  => 'Willbur Smith'
+        ]);
+
+        Writer::create([
+            'name'  => 'Johan Fabricius'
+        ]);
+
+        Writer::create([
+            'name'  => 'Ken Follet'
+        ]);
+
+        Writer::create([
+            'name'  => 'Henrietta Wilkinson'
+        ]);
     }
 }
