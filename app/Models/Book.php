@@ -27,8 +27,14 @@ class Book extends Model
         return DB::table('writers')->join('book_writers', 'writer_id', 'writers.id')->where('book_id', $this->id)->pluck('name');
     }
 
-    public function addWriters()
+    public function getCategoryName()
     {
+        return DB::table('categories')->where('id', $this->category_id)->value('category');
+    }
+
+    public function addDataToBook()
+    {   
+        $this->category = $this->getCategoryName();
         $this->writers = $this->getWriters();
     }
 }

@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\BookController::class, 'index'])->name('home');
 
 Route::resource('books', App\Http\Controllers\BookController::class);
+Route::resource('categories', App\Http\Controllers\CategoryController::class);

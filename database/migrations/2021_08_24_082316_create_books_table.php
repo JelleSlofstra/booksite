@@ -17,9 +17,10 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle')->nullable();
-            $table->string('category');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->string('series')->nullable();
-            $table->string('image_path');
+            $table->string('image_path')->nullable()->default('/images/magier.jpg');
             $table->timestamps();
         });
     }
