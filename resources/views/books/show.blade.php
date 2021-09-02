@@ -7,7 +7,10 @@
                     <div>
                         <a href="{{route('books.index')}}">go Back</a>
                     </div>
-                    <form action="{{route('books.destroy', $book->id)}}" method="POST">
+                    <div>
+                        <a href="{{route('books.edit', $book)}}">Edit this book</a>
+                    </div>
+                    <form action="{{route('books.destroy', $book)}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>

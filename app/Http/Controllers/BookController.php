@@ -27,10 +27,9 @@ class BookController extends Controller
 
     public function store()
     {
-        unset($_POST['_token']);
-        $book = new Book;
-        $book->setRawAttributes($_POST);
-        $book->save();
+        Book::create(request()->all());
+        
+        return redirect('/');
     }
 
     public function show(Book $book)
@@ -44,20 +43,23 @@ class BookController extends Controller
     {
         return view('books/edit', [
             'book'      => $book,
-            'action'    => 'books/' . $book . '/update',
-            'method'    => 'PUT'
+            'action'    => route('books.update', $book),
+            'method'    => 'PATCH',
+            'series'    => Series::all(),
+            'categories'=> Category::all()
         ]);
     }
 
-    public function update(Book $book)
+    public function update(Request $request, Book $book)
     {
-        dd($_POST);
+        $book->update($request->all());
+        return redirect("/books/$book->id");
     }
 
     public function destroy(Book $book)
     {
         $book->destroy($book->id);
-        return redirect('/books');
+        return redirect('/');
     }
 
 
