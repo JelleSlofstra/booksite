@@ -17,26 +17,26 @@ class BookSeeder extends Seeder
         Book::create([
             'title' => 'Magician',
             'category_id' => 1,
-            'series' => 'The riftwar saga',
+            'series_id' => 1,
             'image_path' => '/images/magier.jpg'
         ]);
 
         Book::create([
             'title' => 'A Storm of Swords',
             'category_id' => 1,
-            'series' => 'A song of ice and fire',
+            'series_id' => 2,
             'image_path' => '/images/stormofswords.jpg'
         ]);
 
         Book::create([
             'title' => 'A Clash of Kings',
             'category_id' => 1,
-            'series' => 'A song of ice and fire',
+            'series_id' => 2,
             'image_path' => '/images/clashofkings.jpg'
         ]);
 
         Book::create([
-            'title' => 'A knight of the seven kingdoms',
+            'title' => 'A Knight of the Seven Kingdoms',
             'category_id' => 1,
             'image_path' => '/images/knightofsevenkingdoms.jpg'
         ]);
@@ -49,7 +49,7 @@ class BookSeeder extends Seeder
         ]);
         
         Book::create([
-            'title' => 'Guns, germs and steel',
+            'title' => 'Guns, Germs and Steel',
             'subtitle'  => 'a short history of everybody for the last 13,000 years',
             'category_id' => 2,
             'image_path' => '/images/gunsgermssteel.jpg'
@@ -69,7 +69,7 @@ class BookSeeder extends Seeder
         ]);
         
         Book::create([
-            'title' => 'Oorlog en vrede',
+            'title' => 'Oorlog en Vrede',
             'category_id' => 3,
             'image_path' => '/images/oorlogvrede.jpg'
         ]);
@@ -116,16 +116,16 @@ class BookSeeder extends Seeder
         ]);
         
         Book::create([
-            'title' => 'Vallei der koningen',
+            'title' => 'Vallei der Koningen',
             'category_id' => 4,
-            'series' => 'Taita',
+            'series_id' => 3,
             'image_path' => '/images/valleiderkoningen.jpg'
         ]);
         
         Book::create([
             'title' => 'Het Koningsgraf',
             'category_id' => 4,
-            'series' => 'Taita',
+            'series_id' => 3,
             'image_path' => '/images/koningsgraf.jpg'
         ]);
         
@@ -136,15 +136,15 @@ class BookSeeder extends Seeder
         ]);
         
         Book::create([
-            'title' => 'The evening and the morning',
+            'title' => 'The Evening and the Morning',
             'subtitle'  => 'een geschiedenis',
             'category_id' => 4,
-            'series' => 'Pillars of the earth',
+            'series_id' => 4,
             'image_path' => '/images/eveningmorning.jpg'
         ]);
         
         Book::create([
-            'title' => 'De lekkerste eenpans-gerechten',
+            'title' => 'De lekkerste Eenpans-gerechten',
             'category_id' => 5,
             'image_path' => '/images/eenpansgerechten.jpg'
         ]);

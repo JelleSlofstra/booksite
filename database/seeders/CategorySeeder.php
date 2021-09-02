@@ -15,23 +15,23 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'category' => 'fantasy'
+            'category' => 'Fantasy'
         ]);
 
         Category::create([
-            'category' => 'history'
+            'category' => 'History'
         ]);
 
         Category::create([
-            'category' => 'literature'
+            'category' => 'Literature'
         ]);
 
         Category::create([
-            'category' => 'historic novel'
+            'category' => 'Historic novel'
         ]);
 
         Category::create([
-            'category' => 'cooking'
+            'category' => 'Cooking'
         ]);
     }
 }

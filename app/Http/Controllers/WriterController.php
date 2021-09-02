@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Book;
-use App\Models\Category;
+
+use App\Models\Writer;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class WriterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('categories/index',[
-            'categories' => Category::all()
-        ]);
+        //
     }
 
     /**
@@ -43,23 +41,23 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Writer $writer)
     {
         return view('books/index',[
-            'books' => $category->books
+            'books' => $writer->books
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Writer $writer)
     {
         //
     }
@@ -68,10 +66,10 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Writer $writer)
     {
         //
     }
@@ -79,10 +77,10 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Writer $writer)
     {
         //
     }

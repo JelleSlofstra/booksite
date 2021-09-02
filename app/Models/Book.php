@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class Book extends Model
 {
@@ -22,19 +21,20 @@ class Book extends Model
         'image_path'
     ];
 
-    public function getWriters()
+    protected $with = ['writers', 'category', 'series'];
+
+    public function writers()
     {
-        return DB::table('writers')->join('book_writers', 'writer_id', 'writers.id')->where('book_id', $this->id)->pluck('name');
+        return $this->belongsToMany(Writer::class, 'book_writers');
     }
 
-    public function getCategoryName()
+    public function category()
     {
-        return DB::table('categories')->where('id', $this->category_id)->value('category');
+        return $this->belongsTo(Category::class);
     }
 
-    public function addDataToBook()
-    {   
-        $this->category = $this->getCategoryName();
-        $this->writers = $this->getWriters();
+    public function series()
+    {
+        return $this->belongsTo(Series::class);
     }
 }

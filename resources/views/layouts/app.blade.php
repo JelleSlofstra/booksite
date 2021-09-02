@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<header>
+    @include('partials.header')
+</header>
 <body>
         <main>
             @yield('content')

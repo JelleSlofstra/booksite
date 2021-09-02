@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Book;
+use App\Models\Category;
+use App\Models\Series;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -9,22 +11,17 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::all();
-
-        foreach ($books as $book)
-        {
-            $book->addDataToBook();
-        }
-
         return view('books/index',[
-            'books' => $books
+            'books' => Book::all()
         ]);
     }
 
     public function create()
     {
         return view('books/create',[
-            'action' => route('books.store')
+            'action'    => route('books.store'),
+            'series'    => Series::all(),
+            'categories'=> Category::all()
         ]);
     }
 
@@ -38,8 +35,6 @@ class BookController extends Controller
 
     public function show(Book $book)
     {
-        $book->addDataToBook();        
-
         return view('books/show',[
             'book' => $book
         ]);

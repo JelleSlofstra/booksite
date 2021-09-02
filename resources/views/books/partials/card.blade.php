@@ -1,25 +1,25 @@
 <div class="card col-md-3">
-    <img src="..{{$book->image_path}}" class="card-img-top" alt="...">
+    <img src="..{{$book->image_path}}" class="card-img-top rounded" alt="...">
     
     <div class="card-body">
 
-        <h4 class="card-title">
+        <h3 class="card-title">
         <a href="{{route('books.show',$book)}}">{{$book->title}}</a>
-        </h4>
+        </h3>
 
         @if (isset($book->subtitle))
-            <h5>{{$book->subtitle}}</h5>
+            <h4>{{$book->subtitle}}</h4>
         @endif 
 
         Written by:
         <ul>
             @foreach ($book->writers as $writer)
-                <li>{{$writer}}</li>
+                <li><a href="{{route('writers.show', $writer->id)}}">{{$writer->name}}</a></li>
             @endforeach
         </ul> 
 
-        <p>Category: <a href="{{route('categories.show', $book->category_id)}}">{{$book->category}}</a></p> 
+        <p>Category: <a href="{{route('categories.show', $book->category_id)}}">{{$book->category->category}}</a></p> 
         
         @if (isset($book->series))
-            <p>Part of the '{{$book->series}}' series.</p>
+            <p>Part of the '<a href="{{route('series.show', $book->series_id)}}">{{$book->series->name}}</a>' series.</p>
         @endif
