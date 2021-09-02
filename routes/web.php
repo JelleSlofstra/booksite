@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [App\Http\Controllers\BookController::class, 'index'])->name('home');
+
+Route::resource('books', App\Http\Controllers\BookController::class);
+Route::resource('categories', App\Http\Controllers\CategoryController::class);
+Route::resource('writers', App\Http\Controllers\WriterController::class);
+Route::resource('series', App\Http\Controllers\SeriesController::class);

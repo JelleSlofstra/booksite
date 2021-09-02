@@ -16,9 +16,12 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('category');
-            $table->string('series');
-            $table->string('image_path');
+            $table->string('subtitle')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedBigInteger('series_id')->nullable();
+            $table->foreign('series_id')->references('id')->on('series');
+            $table->string('image_path')->nullable()->default('/images/magier.jpg');
             $table->timestamps();
         });
     }
